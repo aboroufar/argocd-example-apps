@@ -10,7 +10,7 @@ spec:
       labels:
         name:  web-deployment
   replicas: 1
-    spec:
+  spec:
       containers:
       - image:  denizturkmen/python:latest
         name:  web-deployment
