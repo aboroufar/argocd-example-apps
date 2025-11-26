@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  web-deployment
+  labels:
+    name:  web-deployment
+spec:
+  template:
+    metadata:
+      labels:
+        name:  web-deployment
+  replicas: 1
+    spec:
+      containers:
+      - image:  denizturkmen/python:latest
+        name:  web-deployment
+        env:
+        - name:  deniz
+          value:  turkmen       
+        ports:
+        - containerPort:  5000
+          name:  web-deployment
